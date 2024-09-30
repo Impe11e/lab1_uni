@@ -14,17 +14,17 @@ inc2(obj);
 console.dir(obj);
 
 //Exercise 2.1
-mas = [true, 'hello', 5, 12, -200, false, false, 'word', 100, true, 'bye', 10, 5, 1, 'lalal', 'Ukraine', true]
-hash1 = { number: 0, string: 0, boolean: 0 }
-for (const item of mas) {
+const mas1 = [true, 'hello', 5, 12, -200, false, false, 'word', 100, true, 'bye', 10, 5, 1, 'lalal', 'Ukraine', true]
+const hash1 = { number: 0, string: 0, boolean: 0 }
+for (const item of mas1) {
     hash1[typeof item] += 1
 }
 console.log(hash1)
 
 //Exercise 2.2
-mas = [true, 'hello', 5, 12, -200, false, false, 'word', 100, true, 'bye', 10, 5, 1, 'lalal', 'Ukraine', true, null, undefined]
-hash2 = {}
-for (const item of mas) {
+const mas2 = [true, 'hello', undefined, 5, 12, -200, false, false,  null,  'word', 100, true, 'bye', 10, 5, 1, null, 'lalal', 'Ukraine', true, undefined]
+const hash2 = {}
+for (const item of mas2) {
     const type = typeof item
     if (!hash2[type]) {
         hash2[type] = 0;
